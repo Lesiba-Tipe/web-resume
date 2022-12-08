@@ -4,26 +4,32 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link type="text/css" rel="stylesheet" href="./public/style.css"> 
-        <style>
-            
-        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+       
+        <script>
+             $("#foo").click(function(){
+                    console.log("Ofentse");
+                    alert("welele");
+            });
+        </script>
+
     </head>
 
     <body>
         <div class="nav-bar" >
             <div>
-                <button type="button" class="btn" href="/">Home</button>
-                <button type="button" class="btn" href="/">Work Experience</button>
-                <button type="button" class="btn" href="/">Education</button>
-                <button type="button" class="btn" href="/">Interest</button>
+                <button class="btn" href="#home">Home</button>
+                <button  class="btn" href="#work">Work Experience</button>
+                <button  class="btn" href="#education">Education</button>
+                <button  class="btn" href="#interest">Interest</button>
             </div>
         </div>
 
         <div class="forecast" >
-            <p>Johannesbug * 26" 78'</p>
+            <p>Johannesburg * 26"C 78'</p>
         </div>
 
-        <div class="landing">
+        <div id="home">
            
             <img src="./public/profile.jpg" alt="profile image">
             <p>
@@ -37,5 +43,46 @@
             </p>
 
         </div>
+
+        <div id="work">
+            <p class="p-head">Work Experience</p>
+            <p class="p-container">
+                Lorem Ipsum is simply dummy text of the printing
+                and typesetting industry. 
+                Lorem Ipsum has been the industry's standard 
+                dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type 
+                and scrambled it to make a type specimen book. 
+                It has survived not only five centuries
+            </p>
+        </div>
+
+        <div id="education">
+            <p class="p-head">Education</p>
+            <p class="p-container">
+                Lorem Ipsum is simply dummy text of the printing
+                and typesetting industry. 
+                Lorem Ipsum has been the industry's standard 
+                dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type 
+                and scrambled it to make a type specimen book. 
+                It has survived not only five centuries
+            </p>
+        </div>
+
+        <div id="interest">
+            <p class="p-head">Interest</p>
+            <p class="p-container">
+                Lorem Ipsum is simply dummy text of the printing
+                and typesetting industry. 
+                Lorem Ipsum has been the industry's standard 
+                dummy text ever since the 1500s, 
+                when an unknown printer took a galley of type 
+                and scrambled it to make a type specimen book. 
+                It has survived not only five centuries
+            </p>
+        </div>
+
+        
     </body>
 </html>
