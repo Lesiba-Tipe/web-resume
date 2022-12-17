@@ -3,22 +3,15 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link type="text/css" rel="stylesheet" href="./public/style.css"> 
+        <link type="text/css" rel="stylesheet" href="style.css"> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-       
-        <script>
-             $("#foo").click(function(){
-                    console.log("Ofentse");
-                    alert("welele");
-            });
-        </script>
-
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+        <script src="./script.js" ></script>
     </head>
-
     <body>
         <div class="nav-bar" >
             <div>
-                <button class="btn" href="#home">Home</button>
+                <a id="bntHome" type="button"  class="btn" href="#interest">Home</a>
                 <button  class="btn" href="#work">Work Experience</button>
                 <button  class="btn" href="#education">Education</button>
                 <button  class="btn" href="#interest">Interest</button>
@@ -29,9 +22,8 @@
             <p>Johannesburg * 26"C 78'</p>
         </div>
 
-        <div id="home">
-           
-            <img src="./public/profile.jpg" alt="profile image">
+        <div id="home">         
+            <img src="profile.jpg" alt="profile image">
             <p>
                 Lorem Ipsum is simply dummy text of the printing
                 and typesetting industry. 

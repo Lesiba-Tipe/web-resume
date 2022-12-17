@@ -51,9 +51,6 @@ body{
         font-weight: bold;
     }
 
-    .p-container{
-
-    }
 }
 /* [DESKTOP] */
 @media only screen and (min-width: 768px) {
@@ -77,6 +74,7 @@ body{
         color: #ccc;   
         background-color:#532461;
         border: none;
+        text-decoration: none; /*Removes annoying href underling*/
         margin-left: 8px;
         margin-right: 8px;
     }
@@ -100,6 +98,7 @@ body{
         margin-bottom: 0px;
         background-color: #190B30;
         box-shadow: none;
+        height: auto;
     }
     #home{
         display: flex;
