@@ -35,7 +35,7 @@ body{
         color: #ccc;
     }
 
-    #work, #education, #interest{
+    #work, #education, #interest, #skills{
         box-shadow: -2px 2px 3px #aaaaaa;
         padding: 5px 10px;
         margin-top: 25px;
@@ -93,7 +93,7 @@ body{
         color: #320D3D;
         font-size: 15px;
     }
-    #home, #work, #education, #interest{
+    #home, #work, #education, #interest, #skills{
         padding: 10px 30px;
         margin-bottom: 0px;
         background-color: #190B30;
@@ -113,12 +113,13 @@ body{
         border-radius: 50%;
         border: 3px solid #ccc;
     }
-    #home p{
-        display: flex;      
+    #home div{
+        display: flex; 
+        flex-direction: column;     
         color: #ccc;
         padding: 0px 10px;
         background-color: #320D3D;
-        align-items:  center;
+        justify-content: center;
     }
     #home img{
         color: #ccc;
@@ -132,8 +133,14 @@ body{
         font-size: 18px;
         font-weight: bold;
     }
-    .p-container{
+    .p-container, #work div {
         color: #ccc;
-        padding-left: 20%;
+        
+    }
+
+
+    #work div{
+        border-bottom: 0.5px solid #ccc;
+        margin-left: 20%;
     }
 }

@@ -6,15 +6,42 @@
         <link type="text/css" rel="stylesheet" href="style.css"> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
-        <script src="./script.js" ></script>
+        
+        <script>
+            $(document).ready(function() {
+                $.ajax({
+                    url: "/data",
+                    dataType: "json",
+                    cache: false,
+                    success: function(data) {
+                        $("#home div").append("<p>"+ data.about[0] + "</p>");
+                        $("#home div").append("<p>"+ data.about[1] + "</p>");
+                        //$('#work p:nth-child(2)').text(data.work[0].companyName);
+
+                        work = data.work                  
+                        $(work).each(function(index){
+                            $("#work div").append("<h5>"+ work[index].companyName + ":("+ work[index].duration +")" +"</h5>")
+                            $("#work div").append('<ul id="ul' + index + '" ></ul>')
+                            $('#ul' + index).append("<li>Projects: "+ work[index].project +"</li>")
+                            $('#ul' + index).append("<li>Tech: "+ work[index].tech +"</li>")                           
+                        })
+                        
+                    }.bind(this),error: function(xhr, status, err) {
+                        alert("Failed to connect to server")
+                    }
+                });
+            });
+
+        </script>
     </head>
     <body>
         <div class="nav-bar" >
             <div>
-                <a id="bntHome" type="button"  class="btn" href="#interest">Home</a>
-                <button  class="btn" href="#work">Work Experience</button>
-                <button  class="btn" href="#education">Education</button>
-                <button  class="btn" href="#interest">Interest</button>
+                <a class="btn" href="#interest">Home</a>
+                <a  class="btn" href="#work">Work Experience</a>
+                <a  class="btn" href="#education">Education</a>
+                <a  class="btn" href="#skills">Skills</a>
+                <a  class="btn" href="#interest">Interest</a>
             </div>
         </div>
 
@@ -23,58 +50,31 @@
         </div>
 
         <div id="home">         
-            <img src="profile.jpg" alt="profile image">
-            <p>
-                Lorem Ipsum is simply dummy text of the printing
-                and typesetting industry. 
-                Lorem Ipsum has been the industry's standard 
-                dummy text ever since the 1500s, 
-                when an unknown printer took a galley of type 
-                and scrambled it to make a type specimen book. 
-                It has survived not only five centuries
-            </p>
-
+            <img src="profile.jpg" alt="profile image"> 
+            <div></div>     
         </div>
 
         <div id="work">
             <p class="p-head">Work Experience</p>
-            <p class="p-container">
-                Lorem Ipsum is simply dummy text of the printing
-                and typesetting industry. 
-                Lorem Ipsum has been the industry's standard 
-                dummy text ever since the 1500s, 
-                when an unknown printer took a galley of type 
-                and scrambled it to make a type specimen book. 
-                It has survived not only five centuries
-            </p>
+            <div></div>
         </div>
 
         <div id="education">
             <p class="p-head">Education</p>
             <p class="p-container">
-                Lorem Ipsum is simply dummy text of the printing
-                and typesetting industry. 
-                Lorem Ipsum has been the industry's standard 
-                dummy text ever since the 1500s, 
-                when an unknown printer took a galley of type 
-                and scrambled it to make a type specimen book. 
-                It has survived not only five centuries
+               
             </p>
+        </div>
+
+        <div id="skills" >
+            <p class="p-head">Skills</p>
         </div>
 
         <div id="interest">
             <p class="p-head">Interest</p>
             <p class="p-container">
-                Lorem Ipsum is simply dummy text of the printing
-                and typesetting industry. 
-                Lorem Ipsum has been the industry's standard 
-                dummy text ever since the 1500s, 
-                when an unknown printer took a galley of type 
-                and scrambled it to make a type specimen book. 
-                It has survived not only five centuries
+                
             </p>
-        </div>
-
-        
+        </div>       
     </body>
 </html>
