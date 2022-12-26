@@ -18,13 +18,58 @@
                         $("#home div").append("<p>"+ data.about[1] + "</p>");
                         //$('#work p:nth-child(2)').text(data.work[0].companyName);
 
-                        work = data.work                  
+                        work = data.work                 
                         $(work).each(function(index){
                             $("#work div").append("<h5>"+ work[index].companyName + ":("+ work[index].duration +")" +"</h5>")
                             $("#work div").append('<ul id="ul' + index + '" ></ul>')
                             $('#ul' + index).append("<li>Projects: "+ work[index].project +"</li>")
                             $('#ul' + index).append("<li>Tech: "+ work[index].tech +"</li>")                           
                         })
+
+
+                        education = data.education                 
+                        $(education).each(function(index){
+                            $("#education div").append("<h5>"+ education[index].institution +  
+                                ":("+ education[index].year +")" +"</h5>")
+                            $("#education div").append('<ul id="eul' + index + '" ></ul>')
+                            $('#eul' + index).append("<li>"+ education[index].qualification +"</li>")
+                        })
+
+                        skills = data.skill 
+
+                        for (let i = 0; i < skills.length; i++) {
+                            $("#skill div").append("<h5>"+ Object.keys(skills[i]) + "</h5>")
+                            $("#skill div").append('<ul id="sul' + i + '" ></ul>')
+
+                            switch(Object.keys(skills[i])[0]){
+                                    case "interpersonal":
+                                        for (let y = 0; y < skills[i].interpersonal.length; y++) {
+                                            $('#sul' + i).append("<li>"+ skills[i].interpersonal[y]  +"</li>")
+                                        }
+                                        break
+                                    case "programming":
+                                    for (let y = 0; y < skills[i].programming.length; y++) {
+                                        $('#sul' + i).append("<li>"+ skills[i].programming[y]  +"</li>")
+                                    }
+                                    break
+                                    case "framework":
+                                    for (let y = 0; y < skills[i].framework.length; y++) {
+                                        $('#sul' + i).append("<li>"+ skills[i].framework[y]  +"</li>")
+                                    }
+                                    break
+                            }  
+                        }
+
+                        interest = data.interest 
+                        $("#interest div").append("<h5>Interest</h5>")
+                        $("#interest div").append('<ul id="hobbies" ></ul>')
+
+                        $(interest).each(function(index){                            
+                            $('#hobbies').append("<li>"+ interest[index] +"</li>")
+                        })
+
+                        
+                        
                         
                     }.bind(this),error: function(xhr, status, err) {
                         alert("Failed to connect to server")
@@ -40,7 +85,7 @@
                 <a class="btn" href="#interest">Home</a>
                 <a  class="btn" href="#work">Work Experience</a>
                 <a  class="btn" href="#education">Education</a>
-                <a  class="btn" href="#skills">Skills</a>
+                <a  class="btn" href="#skill">Skills</a>
                 <a  class="btn" href="#interest">Interest</a>
             </div>
         </div>
@@ -61,20 +106,17 @@
 
         <div id="education">
             <p class="p-head">Education</p>
-            <p class="p-container">
-               
-            </p>
+            <div></div>
         </div>
 
-        <div id="skills" >
+        <div id="skill" >
             <p class="p-head">Skills</p>
+            <div></div>
         </div>
 
         <div id="interest">
             <p class="p-head">Interest</p>
-            <p class="p-container">
-                
-            </p>
+            <div></div>
         </div>       
     </body>
 </html>

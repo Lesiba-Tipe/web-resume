@@ -35,7 +35,7 @@ body{
         color: #ccc;
     }
 
-    #work, #education, #interest, #skills{
+    #work, #education, #interest, #skill{
         box-shadow: -2px 2px 3px #aaaaaa;
         padding: 5px 10px;
         margin-top: 25px;
@@ -93,7 +93,7 @@ body{
         color: #320D3D;
         font-size: 15px;
     }
-    #home, #work, #education, #interest, #skills{
+    #home, #work, #education, #interest, #skill{
         padding: 10px 30px;
         margin-bottom: 0px;
         background-color: #190B30;
@@ -133,14 +133,9 @@ body{
         font-size: 18px;
         font-weight: bold;
     }
-    .p-container, #work div {
-        color: #ccc;
-        
+    #education div, #work div, #skill div,#interest div {
+        color: #ccc;   
+        margin-left: 20%; 
     }
 
-
-    #work div{
-        border-bottom: 0.5px solid #ccc;
-        margin-left: 20%;
-    }
 }
