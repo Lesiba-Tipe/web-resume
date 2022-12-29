@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link type="text/css" rel="stylesheet" href="style.css"> 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
         
@@ -16,7 +17,6 @@
                     success: function(data) {
                         $("#home div").append("<p>"+ data.about[0] + "</p>");
                         $("#home div").append("<p>"+ data.about[1] + "</p>");
-                        //$('#work p:nth-child(2)').text(data.work[0].companyName);
 
                         work = data.work                 
                         $(work).each(function(index){
@@ -61,67 +61,87 @@
                         }
 
                         interest = data.interest 
-                        $("#interest div").append("<h5>Interest</h5>")
                         $("#interest div").append('<ul id="hobbies" ></ul>')
 
                         $(interest).each(function(index){                            
                             $('#hobbies').append("<li>"+ interest[index] +"</li>")
                         })
 
-                        
-                        
+                        contact = data.contacts
+                        $("#contact div").append('<ul id="contacts" style="list-style-type:none;" ></ul>')
+                        $("#contacts").append("<li class='bi bi-telephone'> "+ contact.cell +"</li>")
+                        $("#contacts").append("<li><a href=" + contact.twitter +" class='bi bi-twitter'> @iamtipe</a></li>")                       
+                        $("#contacts").append("<li class='bi bi-envelope'> "+ contact.email +" </li>")
+                        $("#contacts").append("<li><a href=" + contact.github +" class='bi bi-github'> @Lesiba-Tipe</a></li>")
+ 
                         
                     }.bind(this),error: function(xhr, status, err) {
                         alert("Failed to connect to server")
                     }
                 });
+
+                window.onscroll = function(){
+                    var navbar = document.getElementById("navbar");
+                    var sticky = navbar.offsetTop;
+
+                    if(window.pageYOffset >= sticky) {
+                        navbar.classList.add("sticky")
+                    } 
+                    else {
+                        navbar.classList.remove("sticky");
+                    }
+                };
+               
             });
 
         </script>
     </head>
     <body>
-        <div class="nav-bar" >
+        <div id="navbar" class="nav-bar" >
             <div>
-                <a class="btn" href="#interest">Home</a>
+                <a class="btn" href="#home">Home</a>
                 <a  class="btn" href="#work">Work Experience</a>
                 <a  class="btn" href="#education">Education</a>
                 <a  class="btn" href="#skill">Skills</a>
                 <a  class="btn" href="#interest">Interest</a>
-                <a  class="btn" href="#contacts">Contacts</a>
+                <a  class="btn" href="#contact">Contacts</a>
             </div>
         </div>
+<div id="content">
+    
+    <div class="forecast" >
+        <p>Johannesburg * 26"C 78'</p>
+    </div>
 
-        <div class="forecast" >
-            <p>Johannesburg * 26"C 78'</p>
-        </div>
+    <div id="home">         
+        <img src="profile.jpg" alt="profile image"> 
+        <div></div>     
+    </div>
 
-        <div id="home">         
-            <img src="profile.jpg" alt="profile image"> 
-            <div></div>     
-        </div>
+    <div id="work">
+        <p class="p-head">Work Experience</p>
+        <div></div>
+    </div>
 
-        <div id="work">
-            <p class="p-head">Work Experience</p>
-            <div></div>
-        </div>
+    <div id="education">
+        <p class="p-head">Education</p>
+        <div></div>
+    </div>
 
-        <div id="education">
-            <p class="p-head">Education</p>
-            <div></div>
-        </div>
+    <div id="skill" >
+        <p class="p-head">Skills</p>
+        <div></div>
+    </div>
 
-        <div id="skill" >
-            <p class="p-head">Skills</p>
-            <div></div>
-        </div>
-
-        <div id="interest">
-            <p class="p-head">Interest</p>
-            <div></div>
-        </div>  
-        
-        <div id="footer">
-
-        </div>
+    <div id="interest">
+        <p class="p-head">Interests</p>
+        <div></div>
+    </div>  
+    
+    <div id="contact">
+        <p class="p-head">Contacts</p>
+       <div></div>
+    </div>
+</div>
     </body>
 </html>
