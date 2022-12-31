@@ -1,0 +1,154 @@
+/*
+    Primary Color: #000000
+    Secondary Color: #190B30; Dark
+
+    Other: #CCCCCC
+           #320D3D  Medium
+           #532461   Light
+*/
+/* [MOBILE] */
+
+/*
+GLOBAL
+*/
+
+#navbar {
+    overflow: hidden;
+  }
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+#content {
+   margin-top: 40px;
+  }
+a{
+    color: #ccc;
+    text-decoration: none; /*Removes annoying href underling*/
+}
+  
+body{
+    background-color: #ccc;
+    font-family:Verdana, Tahoma;
+}
+@media only screen and (max-width: 767px) {
+    body{
+        font-size: 12px;
+        background-color: #190B30;
+    }
+    #home{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    img{
+        width: 200px;
+        background-color: #ccc;
+        border-radius: 50%;
+        border: 3px solid #ccc;
+    }
+
+    #home p{
+
+        padding: 0px 10px;
+        color: #ccc;
+    }
+
+    #work, #education, #interest, #skill{
+        box-shadow: -2px 2px 3px #aaaaaa;
+        padding: 5px 10px;
+        margin-top: 25px;
+        color: #ccc;
+        background-color:#320D3D;
+    }
+
+    .p-head{
+        text-align: center;
+        padding-bottom: 3px;
+        border-bottom: 1px solid #ccc;
+        font-size: 15px;
+        font-weight: bold;
+    }
+
+}
+/* [DESKTOP] */
+@media only screen and (min-width: 768px) {
+    body{
+        font-size: 14px;
+        background-color: #190B30;
+    }
+    .nav-bar{
+        display: flex;
+        justify-content: center;
+        padding: 10px 0px;
+    }
+    .nav-bar div{
+        width:fit-content;       
+    }
+    .btn{
+        padding: 4px 15px;
+        border-radius: 25px;
+        font-family:Verdana, Tahoma;
+        color: #ccc;   
+        background-color:#532461;
+        border: none;
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+    .btn:hover{
+        color: #320D3D;
+        background-color: #fff;
+    }
+    .forecast{
+        display: flex;
+        justify-content: end;
+    }
+
+    .forecast p{
+        padding: 3px 10px;
+        margin: 0px;
+        color: #d1891c;
+        font-size: 15px;
+    }
+    #home, #work, #education, #interest, #skill, #contact{
+        color: #ccc;
+        padding: 10px 30px;
+        margin-bottom: 0px;
+        background-color: #190B30;
+        box-shadow: none;
+        height: auto;
+    }
+    #home{
+        display: flex;
+        justify-content: end;
+        column-gap: 15px;
+        padding-left: 20%;
+    }
+    img{
+        height: 250px;
+        border-radius: 50%;
+        border: 3px solid #ccc;
+    }
+    #home div{
+        display: flex; 
+        flex-direction: column;     
+        padding: 0px 10px;
+        background-color: #320D3D;
+        justify-content: center;
+    }
+    #home img{
+        background-color: #6bb648;   
+    }
+
+    .p-head{
+        padding-bottom: 3px;
+        border-bottom: 1px solid #ccc;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    #education div, #work div, #skill div,#interest div, #contact div {
+        margin-left: 20%;
+    }   
+}

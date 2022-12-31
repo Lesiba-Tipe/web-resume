@@ -1,0 +1,86 @@
+{
+    "about":[
+        "I have always had interest in computer science, During the time I developed a passion forprogramming, my goal is to keep progressing in this field as it is a very fast paced and demanding industry so I spend most of my time learning about new software development technologies.",
+        
+        "I am also a hands-on person; I enjoy building electronic circuits for basic use or educational purposes like controlling lights. I am creative and like by designing logos and posters using Adobe Photoshop and Illustrator."
+    ],
+    "contacts":{
+        "twitter": "https://twitter.com/iamtipe",
+        "cell": "(072) 5846 188",
+        "address":{
+            "physical": {},
+            "postal":{}
+        },
+        "github": "https://github.com/Lesiba-Tipe",
+        "email": "lesiba.tipe@gmail.com"
+    },
+
+    "work":[
+        {
+            "companyName":"Dynamic DNA",
+            "project":["Car spare","Visitor managent",""],
+            "tech": [ 
+                "Java MVC with springboot & thymeleaf", 
+                "Firebase", "SQL Server", 
+                ".Net MVC with Entity Framework."
+            ], 
+            "duration":"May 2022 - current"
+        },
+        {
+            "companyName":"Tsogo Sun",
+            "project":["Chip Tracking system"],
+            "tech": ["WFP","Entity Framework","SQL Server"],
+            "duration":"April 2019 - March 2020"
+        }
+        
+    ],
+
+    "skill":
+    [
+        {
+            "interpersonal": [
+                "Good Communication (verbal and written).",
+                "Problem solving",
+                "Attention to details",
+                "Ability to work in team or as an individual"
+            ]
+        },
+        {
+            "programming":[
+                "C#",
+                "Java"
+            ]
+        },
+        {
+            
+        "framework":[
+            ".Net (Web API/MVC), REST Services",
+            "Angular2",
+            "Entity Framework",
+            "Agile Software Development(Jira)",
+            "Git (Github and BitBucket)",
+            "Springboot,Thymeleaf, Firebase"
+        ]
+        }
+    ],
+
+    "education":
+    [
+        {
+            "institution":"Tlakale Mashashane",
+            "qualification":"Matric",
+            "year":"2012"
+        },
+        {
+            "institution":"Tshwane university of Technology",
+            "qualification":"IT:Intelligent Industrial System",
+            "type":"Diploma",           
+            "year":"2018"
+        }
+    ],
+    "interest":[
+        "I spend my extra time at church and church choir",
+        "I love playing 3D car racing video games"
+    ]
+
+}
