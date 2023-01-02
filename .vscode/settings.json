@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/05bde702-3eb2-4513-85b0-3c77dc96c404/AppServices/subscriptions/05bde702-3eb2-4513-85b0-3c77dc96c404/resourceGroups/TipeGraphics/providers/Microsoft.Web/sites/web-resume-app",
+    "appService.deploySubpath": "docs"
+}
